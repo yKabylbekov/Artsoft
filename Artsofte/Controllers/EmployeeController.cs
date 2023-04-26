@@ -21,7 +21,7 @@ namespace Artsofte.Controllers
         {
             var employees = _context.Employees.ToList();
             ViewBag.Departments = _context.Departments.ToList();
-            ViewBag.ProgrammingLanguages = _context.ProgramingLanguages.ToList();
+            ViewBag.ProgrammingLanguages = _context.ProgrammingLanguages.ToList();
             return View( employees );
         }
 
@@ -29,7 +29,7 @@ namespace Artsofte.Controllers
         public IActionResult Create()
         {
             ViewBag.Departments = _context.Departments.ToList();
-            ViewBag.ProgrammingLanguages = _context.ProgramingLanguages.ToList();
+            ViewBag.ProgrammingLanguages = _context.ProgrammingLanguages.ToList();
             return View();
         }
 
@@ -51,7 +51,7 @@ namespace Artsofte.Controllers
         {
             var employee = GetEmployeeById( id );
             ViewBag.Departments = _context.Departments.ToList();
-            ViewBag.ProgrammingLanguages = _context.ProgramingLanguages.ToList();
+            ViewBag.ProgrammingLanguages = _context.ProgrammingLanguages.ToList();
             if( employee == null ) {
                 return NotFound();
             }
@@ -68,7 +68,7 @@ namespace Artsofte.Controllers
                 return RedirectToAction( "Index" );
             }
             ViewBag.Departments = _context.Departments.ToList();
-            ViewBag.ProgrammingLanguages = _context.ProgramingLanguages.ToList();
+            ViewBag.ProgrammingLanguages = _context.ProgrammingLanguages.ToList();
             return View( employee );
         }
 
@@ -87,6 +87,12 @@ namespace Artsofte.Controllers
         public Employee GetEmployeeById( int employeeId )
         {
             return _context.Employees.FirstOrDefault( employee => employee.Id == employeeId );
+        }
+
+        public IActionResult GetNames()
+        {
+            var employeeNames = _context.Employees.Select( e => e.Name ).ToList();
+            return Json( employeeNames );
         }
     }
 }

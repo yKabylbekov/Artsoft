@@ -25,7 +25,7 @@ namespace Artsofte.Controllers
         public IActionResult Create( [Bind( "Name" )] ProgrammingLanguage language )
         {
             if( ModelState.IsValid ) {
-                _context.ProgramingLanguages.Add( language );
+                _context.ProgrammingLanguages.Add( language );
                 _context.SaveChanges();
                 return RedirectToAction("Index","Employee");
             }

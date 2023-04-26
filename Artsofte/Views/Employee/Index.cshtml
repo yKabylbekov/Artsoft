@@ -48,7 +48,7 @@
                     @Html.DisplayFor(modelItem => item.Gender)
                 </td>
                 <td align="center">
-                    @(( ( ViewBag.Departments as List<Department> )?.FirstOrDefault( d => d.Id == item.DepartmentId ) )?.Name)
+                    @(( ( ViewBag.Departments as List<Department> )?.FirstOrDefault( d => d.Id == item.DepartmentId ) )?.Floor)
                 </td>
                 <td align="center">
                     @(( ( ViewBag.ProgrammingLanguages as List<ProgrammingLanguage> )?.FirstOrDefault( d => d.Id == item.ProgrammingLanguageId ) )?.Name)

@@ -10,19 +10,19 @@
         <form asp-action="Create" asp-controller="Employee" method="post">
             <div class="form-group">
                 <label asp-for="Name">Name</label>
-                <input asp-for="Name" class="form-control" autocomplete="off">
+                <input asp-for="Name" class="form-control autocomplete" autocomplete="on">
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Surname">Surname</label>
-                <input asp-for="Surname" class="form-control" autocomplete="off">
+                <input asp-for="Surname" class="form-control">
                 <span asp-validation-for="Surname" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Age">Age</label>
-                <input asp-for="Age" type="number" class="form-control" autocomplete="off">
+                <input asp-for="Age" type="number" class="form-control">
                 <span asp-validation-for="Age" class="text-danger"></span>
             </div>
 

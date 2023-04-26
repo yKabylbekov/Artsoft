@@ -18,7 +18,7 @@ namespace Artsofte.Data
             get; set;
         }
 
-        public DbSet<ProgrammingLanguage> ProgramingLanguages {
+        public DbSet<ProgrammingLanguage> ProgrammingLanguages {
             get; set;
         }
     }
